@@ -1,33 +1,35 @@
 .home-section {
     width: 100%;
-    background: #0E1C24 url("../imgs/bg1.jpg");
+    background: #0E1C24 url("../imgs/bg1.webp");
     background-size: cover;
     background-position: center center;
 }
 
 .home-section__header {
     width: 100%;
-    padding-top: 23px; 
+    padding-top: 10px;
 }
 
-.home-section__header > .container{
+.home-section__header>.container {
     display: flex;
     align-items: center;
-    justify-content: space-between;   
+    justify-content: space-between;
 }
 
 .home-section__logo {
-    width: clamp(85px, 11.5vw, 130px);
-    padding-left: clamp(25px, 3.5vw, 45px);
+    padding-top: 5px;
+    width: clamp(85px, 15vw, 150px);
+    padding-left: clamp(25px, 6vw, 65px);
 }
 
-#burger, [for=burger]{
+#burger,
+[for=burger] {
     display: none;
 }
 
-@media  (max-width: 600px){
+@media (max-width: 600px) {
 
-    [for=burger]{
+    [for=burger] {
         display: block;
         position: fixed;
         right: clamp(35px, 10vw, 50px);
@@ -35,7 +37,7 @@
         top: 20px;
     }
 
-    .menu{
+    .menu {
         display: none;
         position: fixed;
         right: 100px;
@@ -49,13 +51,13 @@
         color: #000000;
     }
 
-    .menu__item{
-        color:#000000;
+    .menu__item {
+        color: #000000;
     }
 
-    #burger:checked~.menu{
-        display: block;  
-        width: 100px;   
+    #burger:checked~.menu {
+        display: block;
+        width: 100px;
     }
 }
 
@@ -67,14 +69,14 @@
     display: inline-block;
     font-size: clamp(14px, 2vw, 18px);
     font-weight: 500;
-    margin-right: 2.8vw;
+    margin-right: 2.9vw;
 }
 
 .menu__item:last-child {
     margin-right: 0px;
 }
 
-@media (min-width: 601px){
+@media (min-width: 601px) {
 
     .menu__link:hover {
         color: #D0C8AD;
@@ -104,7 +106,7 @@
 .home-section__name {
     text-transform: uppercase;
     font-size: clamp(56px, 13vw, 128px);
-    margin-top: clamp(140px, 12vw, 150px);
+    margin-top: clamp(140px, 12vw, 145px);
     font-weight: 400;
 }
 
@@ -138,17 +140,17 @@
     background: #0E1C24;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: clamp(15px, 6vw, 80px);
+    padding-left: clamp(15px, 8vw, 100px);
     padding-right: clamp(15px, 6vw, 80px);
     justify-content: space-between;
 }
 
 .about-section__description:nth-child(odd) {
-    padding-right: clamp(20px, 2vw, 100px);
+    padding-right: clamp(20px, 5vw, 80px);
 }
 
 .about-section__description:nth-child(even) {
-    padding-left: clamp(20px, 2vw, 100px);
+    padding-left: clamp(20px, 5.5vw, 80px);
 }
 
 .about-section__text {
@@ -162,13 +164,17 @@
     width: clamp(280px, 37vw, 440px);
 }
 
+.about-section__text:last-child {
+    margin-top: 115px;
+}
+
 .about-section__first-image,
 .about-section__text {
-    margin-top: clamp(20px, 5.5vw, 90px);
+    margin-top: clamp(20px, 7.7vw, 97px);
 }
 
 .about-section__second-image {
-    margin-top: clamp(20px, 5.5vw, 90px);
+    margin-top: clamp(20px, 9vw, 110px);
 }
 
 .about-section__button {
@@ -182,15 +188,21 @@
     font-size: 18px;
     font-weight: 500;
     color: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 45px;
     margin-bottom: 20px;
-    margin-left: clamp(15px, 6vw, 80px);
+    margin-left: clamp(15px, 8vw, 100px);
 }
 
 .about-section__button:hover {
     background: #D0C8AD;
     color: #0E1C24;
     font-weight: 700;
+}
+
+@media (max-width: 860px){
+    .about-section__text:last-child {
+        margin-top: clamp(10px, 7vw, 70px);
+    }
 }
 
 @media (max-width: 700px) {
@@ -203,12 +215,12 @@
         padding-right: clamp(10px, 4vw, 30px);
     }
 
-    .about-section__description:nth-child(even){
+    .about-section__description:nth-child(even) {
         display: grid;
         padding-left: 0;
     }
 
-    .about-section__description:nth-child(odd){
+    .about-section__description:nth-child(odd) {
         padding-right: 0;
     }
 
@@ -218,6 +230,10 @@
 
     .about-section__text {
         order: 2;
+    }
+
+    .about-section__text:last-child {
+        margin-top: clamp(10px, 4vw, 30px);
     }
 
     .about-section__first-image,
@@ -253,8 +269,8 @@
 .scrolling-wrapper {
     margin-top: clamp(20px, 5vw, 60px);
     padding-bottom: 20px;
-    padding-left: clamp(15px, 6vw, 80px);
-    padding-right: clamp(15px, 6vw, 80px);
+    padding-left: clamp(15px, 9vw, 100px);
+    padding-right: clamp(15px, 9vw, 100px);
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -265,43 +281,49 @@
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-    width: 250px;
+    width: 245px;
     height: 520px;
-    margin-right: 20px;
+    margin-right: 0px;
     flex: 0 0 auto;
     padding-top: 458px;
+    margin-right: 20px;
 }
 
 .destinations-section__scrolling-card:last-child {
     margin-right: 0px;
 }
 
+.destinations-section__scrolling-card-links{
+    text-decoration: none;
+    color: white;
+}
+
 .card-1 {
-    background: url("../imgs/card1.jpg");
+    background: url("../imgs/card1.webp");
     background-size: cover;
 }
 
 .card-2 {
-    background: url("../imgs/card2.jpg");
+    background: url("../imgs/card2.webp");
     background-size: cover;
 }
 
 .card-3 {
-    background: url("../imgs/card3.jpg");
+    background: url("../imgs/card3.webp");
     background-size: cover;
 }
 
 .card-4 {
-    background: url("../imgs/card4.jpg");
+    background: url("../imgs/card4.webp");
     background-size: cover;
 }
 
 .popular-tours-section__tour-card {
     display: flex;
     align-items: center;
-    margin-top: clamp(20px, 6.7vw, 90px);
-    padding-left: clamp(15px, 6vw, 80px);
-    padding-right: clamp(15px, 6vw, 80px);
+    margin-top: clamp(20px, 7.1vw, 90px);
+    padding-left: clamp(15px, 9vw, 100px);
+    padding-right: clamp(15px, 9vw, 100px);
 }
 
 .popular-tours-section__tour-card:first-child {
@@ -313,11 +335,12 @@
 }
 
 .popular-tours-section__tour-image:nth-child(odd) {
-    margin-right: clamp(15px, 4.5vw, 80px);
+    margin-right: clamp(15px, 6.5vw, 80px);
 }
 
 .popular-tours-section__tour-image:nth-child(even) {
-    margin-left: clamp(15px, 4.5vw, 80px);
+    margin-left: clamp(15px, 6.5vw, 80px);
+
 }
 
 .popular-tours-section__tour-image:hover {
@@ -327,10 +350,11 @@
 .popular-tours-section__tour-name {
     font-size: 24px;
     font-weight: 600;
+    margin-top: 42px;
     margin-bottom: clamp(20px, 4.5vw, 50px);
 }
 
-.popular-tours-section__links{
+.popular-tours-section__links {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 24px;
@@ -347,9 +371,17 @@
     margin-top: clamp(10px, 1.5vw, 25px);
 }
 
+.popular-tours-section__description:nth-child(2n+1) {
+    margin-top: clamp(10px, 2.7vw, 32px);
+}
+
 .popular-tours-section__arrow {
-    margin-top: clamp(10px, 3.5vw, 40px);
+    margin-top: clamp(10px, 3.5vw, 45px);
     float: right;
+}
+
+.popular-tours-section__tour-card:last-child>.popular-tours-section__tour-text>.popular-tours-section__arrow {
+    margin-top: clamp(10px, 4.5vw, 48px);
 }
 
 .popular-tours-section__arrow:hover {
@@ -374,7 +406,7 @@
     font-size: 18px;
     font-weight: 500;
     color: #FFFFFF;
-    margin-top: 80px;
+    margin-top: 87px;
     margin-bottom: 90px;
     justify-content: center;
 }
@@ -399,7 +431,7 @@
         margin-left: 0;
     }
 
-    .popular-tours-section__tour-card:nth-child(even){
+    .popular-tours-section__tour-card:nth-child(even) {
         display: flex;
         flex-direction: column-reverse;
     }
@@ -432,9 +464,9 @@
 }
 
 
-@media (max-width: 500px){
-    
-    .recommended-sights-section__word-recommended{
+@media (max-width: 500px) {
+
+    .recommended-sights-section__word-recommended {
         display: none;
     }
 
@@ -463,7 +495,7 @@
 .recommended-sights-section__text {
     font-size: 24px;
     font-weight: 400;
-    margin-top: 25px;
+    margin-top: 21px;
 }
 
 .recommended-sights-section__text:hover {
@@ -471,14 +503,18 @@
     cursor: pointer;
 }
 
+.sections-names-reviews {
+    margin-top: clamp(30px, 5.6vw, 90px);
+}
+
 .reviews-section__wrapper {
-    height: 520px;
+    height: 473px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-left: clamp(15px, 6vw, 80px);
-    padding-right: clamp(15px, 6vw, 80px);
-    margin-top: clamp(20px, 5vw, 60px);
+    padding-left: clamp(15px, 8.1vw, 100px);
+    padding-right: clamp(15px, 8.1vw, 100px);
+    margin-top: clamp(20px, 8vw, 60px);
 }
 
 .reviews-section__reviews {
@@ -513,7 +549,7 @@
     font-weight: 400;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
     .reviews-section__wrapper {
         display: flex;
         flex-direction: row;
@@ -543,8 +579,8 @@
 }
 
 .contact-section {
-    padding-left: clamp(15px, 6vw, 80px);
-    padding-right: clamp(15px, 6vw, 80px);
+    padding-left: clamp(15px, 8vw, 100px);
+    padding-right: clamp(15px, 8vw, 100px);
     padding-top: clamp(30px, 6.5vw, 90px);
     display: flex;
     justify-content: space-between;
@@ -568,11 +604,15 @@
 }
 
 .contact-section__form {
-    margin-top: 40px;
+    margin-top: 36px;
 }
 
 .contact-section__inputbox:nth-child(n+1) {
     margin-top: 20px;
+}
+
+.contact-section__name {
+    margin-top: 10px;
 }
 
 .inputbox-name,
@@ -611,7 +651,7 @@
     background-color: #D0C8AD;
     width: clamp(100px, 30vw, 140px);
     height: 50px;
-    margin-top: 30px;
+    margin-top: 5px;
     text-align: center;
     margin-bottom: 90px;
     border-radius: 8px;
@@ -656,8 +696,8 @@
 
 .footer__group-block {
     display: flex;
-    padding-left: clamp(15px, 6vw, 80px);
-    padding-right: clamp(15px, 6vw, 80px);
+    padding-left: clamp(15px, 8vw, 100px);
+    padding-right: clamp(15px, 8vw, 100px);
 }
 
 .footer__link:hover {
@@ -665,11 +705,11 @@
 }
 
 .footer__help-block {
-    margin-left: clamp(50px, 15vw, 200px);
+    margin-left: clamp(50px, 11vw, 200px);
 }
 
 .footer__info-block {
-    margin-left: clamp(50px, 20vw, 350px);
+    margin-left: clamp(50px, 28vw, 390px);
 }
 
 .footer__name {
@@ -706,22 +746,22 @@
 }
 
 .footer__info-images {
-    margin-right: 25px;
+    margin-right: 21px;
     width: clamp(12px, 1.5vw, 15px);
 }
 
 .footer__copyright {
     display: flex;
-    margin-top: clamp(5px, 3vw, 40px);
+    margin-top: clamp(5px, 6.5vw, 80px);
     font-size: clamp(12px, 1.5vw, 18px);
     font-weight: 400;
-    padding-left: clamp(15px, 6vw, 80px);
+    padding-left: clamp(15px, 8.2vw, 100px);
     padding-right: clamp(15px, 6vw, 80px);
     margin-bottom: clamp(15px, 2vw, 40px);
 }
 
 .footer__follow-images {
-    margin-left: 15px;
+    margin-left: 11px;
     width: clamp(12px, 1.5vw, 17px);
 }
 
@@ -729,7 +769,7 @@
     width: clamp(6px, 1vw, 11px);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
     .footer__group-block {
         height: 335px;
         flex-direction: column;
@@ -737,7 +777,8 @@
     }
 
     .footer__info-block {
-        -webkit-order: 2; /* Safari 6.1+ */
+        -webkit-order: 2;
+        /* Safari 6.1+ */
         order: 2;
         margin: 40px 0 0;
         width: 200px;
@@ -746,7 +787,7 @@
     .footer__help-block {
         -webkit-order: 3;
         order: 3;
-        margin-left: 0;
+        margin-left: -50px;
     }
 
     .footer__information-block {
