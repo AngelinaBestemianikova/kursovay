@@ -136,6 +136,10 @@
     font-weight: 800;
 }
 
+.hidden-paragraph{
+    display: none;
+}
+
 .about-section__info {
     background: #0E1C24;
     display: grid;
@@ -705,8 +709,10 @@
 }
 
 .footer__help-block {
-    margin-left: clamp(50px, 11vw, 200px);
+    margin-left: clamp(50px, 10vw, 190px);
 }
+
+
 
 .footer__info-block {
     margin-left: clamp(50px, 28vw, 390px);
@@ -787,7 +793,7 @@
     .footer__help-block {
         -webkit-order: 3;
         order: 3;
-        margin-left: -50px;
+        margin-left: -70px;
     }
 
     .footer__information-block {
