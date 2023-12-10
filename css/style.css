@@ -1,3 +1,29 @@
+#back-top { 
+    position: fixed; 
+    bottom: 30px; 
+    right: 8px; 
+} 
+ 
+#back-top span { 
+    width: 50px; 
+    height: 50px; 
+    display: block; 
+    margin-bottom: 6px; 
+    background: #D0C8AD url(../imgs/up-arrow.png) no-repeat center center; 
+    background-size: 68%; 
+    -webkit-border-radius: 100px; 
+    -moz-border-radius: 100px; 
+    border-radius: 100px; 
+    -webkit-transition: 1s; 
+    -moz-transition: 1s; 
+    transition: 1.2s; 
+} 
+ 
+#back-top a:hover span { 
+    background-color: #efece5; 
+    cursor: pointer;
+}
+
 .home-section {
     width: 100%;
     background: #0E1C24 url("../imgs/bg1.webp");
